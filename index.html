@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>Le Pendu</title>
+</head>
+<body>
+    <div id="contenu">
+    <section id="bienvenue">
+        <header>
+            <h1>LE PENDU</h1>
+        </header>
+        <!-- ON UTILISE ENCORE FLEXBOX POUR ALIGNER -->
+            <div id="flex-presentation" class="container">
+                <div class="gauche-presentation">
+                    <h2>Jouer au pendu</h2>
+                    <span>Deviner le mot avant que le pendu apparaisse. Vous avez <b>11</b> chances avant d'être pendu.</span>
+                    <br><br>
+                    <div id="tableau">
+                        <span class="eltTab">
+                            Mot de <span id="nbCar">0</span> lettres
+                        </span>
+                        <hr>
+                        <span class="eltTab">
+                            Lettres trouvées: <span id="nbCarFind"></span>
+                        </span>
+                        <hr>
+                        <span class="eltTab">
+                            Tentatives: <span id="nbTry"></span>
+                        </span>
+                        <hr>
+                        <span class="eltTab">
+                            Erreurs: <span id="nbErr"></span> / 11
+                        </span>
+                    </div>
+                    <br>
+                    <div id="input-area">
+                        <div class="input-ligne">
+                            <div class="input-lettre" data-lettre="A">A</div>
+                            <div class="input-lettre" data-lettre="Z">Z</div>
+                            <div class="input-lettre" data-lettre="E">E</div>
+                            <div class="input-lettre" data-lettre="R">R</div>
+                            <div class="input-lettre" data-lettre="T">T</div>
+                            <div class="input-lettre" data-lettre="Y">Y</div>
+                            <div class="input-lettre" data-lettre="U">U</div>
+                            <div class="input-lettre" data-lettre="I">I</div>
+                            <div class="input-lettre" data-lettre="O">O</div>
+                            <div class="input-lettre" data-lettre="P">P</div>
+                        </div>
+                        <div class="input-ligne">
+                            <div class="input-lettre" data-lettre="Q">Q</div>
+                            <div class="input-lettre" data-lettre="S">S</div>
+                            <div class="input-lettre" data-lettre="D">D</div>
+                            <div class="input-lettre" data-lettre="F">F</div>
+                            <div class="input-lettre" data-lettre="G">G</div>
+                            <div class="input-lettre" data-lettre="H">H</div>
+                            <div class="input-lettre" data-lettre="J">J</div>
+                            <div class="input-lettre" data-lettre="K">K</div>
+                            <div class="input-lettre" data-lettre="L">L</div>
+                            <div class="input-lettre" data-lettre="M">M</div>
+                        </div>
+                        <div class="input-ligne">
+                            <div class="input-lettre input-lettre-vide"></div>
+                            <div class="input-lettre input-lettre-vide"></div>
+                            <div class="input-lettre" data-lettre="W">W</div>
+                            <div class="input-lettre" data-lettre="X">X</div>
+                            <div class="input-lettre" data-lettre="C">C</div>
+                            <div class="input-lettre" data-lettre="V">V</div>
+                            <div class="input-lettre" data-lettre="B">B</div>
+                            <div class="input-lettre" data-lettre="N">N</div>
+                            <div class="input-lettre input-lettre-vide"></div>
+                            <div class="input-lettre input-lettre-vide"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="droite-presentation">
+                    <ul id="wordToFind">  
+                    </ul>
+                    <br /><br />
+                    <canvas id="mon_canvas" width="300" height="300">
+                        Message pour les navigateurs ne supportant pas encore canvas.
+                    </canvas>
+                </div>
+            </div>
+    </section>
+
+    <section id="resultat" class="hidden">
+        <span id="message-resultat" ></span>
+        <br />
+        <a href="#" class="buttonPlay" id="buttonPlay">Relancer une partie</a>
+    </section>
+
+    <footer>
+        <div class="container">
+            © Guillaume Friess
+        </div>
+    </footer>
+    </div>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+    <script src="script.js"></script>
+</body>
+</html>
